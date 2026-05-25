@@ -2,6 +2,8 @@
 
 A premium, modern ride-sharing and delivery booking application built using a microservices architecture. This repository is structured as a **Monorepo** containing both the Next.js frontend and the Quarkus backend services.
 
+🌐 **Live Demo (Frontend)**: [https://microcredential.vercel.app](https://microcredential.vercel.app)
+
 ---
 
 ## 📂 Repository Structure
