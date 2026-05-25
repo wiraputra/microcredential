@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "7faee2e8-d6c5-4422-b06f-68286a1df7fb",
+		"name": "BangJek Microservices API",
+		"description": "Collection untuk pengujian User Service (Port 8081) dan Order Service (Port 8082) dari BangJek Microservices.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Service (Port 8081)",
+			"item": [
+				{
+					"name": "Register User (CUSTOMER)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Budi Customer\",\n    \"email\": \"budi@gmail.com\",\n    \"phone\": \"08123456789\",\n    \"password\": \"password123\",\n    \"role\": \"CUSTOMER\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users"
+							]
+						},
+						"description": "Mendaftarkan user baru dengan role CUSTOMER."
+					},
+					"response": []
+				},
+				{
+					"name": "Register User (DRIVER)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Slamet Driver\",\n    \"email\": \"slamet@gmail.com\",\n    \"phone\": \"08987654321\",\n    \"password\": \"password321\",\n    \"role\": \"DRIVER\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users"
+							]
+						},
+						"description": "Mendaftarkan user baru dengan role DRIVER."
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"budi@gmail.com\",\n    \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"login"
+							]
+						},
+						"description": "Melakukan login user menggunakan email dan password."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users"
+							]
+						},
+						"description": "Melihat daftar semua user."
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users",
+								"1"
+							]
+						},
+						"description": "Mengambil satu data user berdasarkan ID."
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Budi Ganti Nama\",\n    \"email\": \"budi@gmail.com\",\n    \"phone\": \"08123456789\",\n    \"password\": \"passwordnew\",\n    \"role\": \"CUSTOMER\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users",
+								"1"
+							]
+						},
+						"description": "Mengupdate data user berdasarkan ID."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users",
+								"1"
+							]
+						},
+						"description": "Menghapus user beserta profile terkait (mencegah orphan data)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Service (Port 8082)",
+			"item": [
+				{
+					"name": "Create Order (Valid CUSTOMER)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerId\": 1,\n    \"pickup\": \"Stasiun Sudirman\",\n    \"destination\": \"Monas\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"orders"
+							]
+						},
+						"description": "Membuat order baru dengan ID Customer yang valid (pastikan user dengan ID ini memiliki role CUSTOMER)."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Order (Invalid - DRIVER)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerId\": 2,\n    \"pickup\": \"Stasiun Sudirman\",\n    \"destination\": \"Monas\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"orders"
+							]
+						},
+						"description": "Menguji validasi pembuatan order dengan ID User yang bertipe DRIVER (harusnya ditolak error 400)."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"orders"
+							]
+						},
+						"description": "Melihat semua data order yang terdaftar."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/orders/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"orders",
+								"1"
+							]
+						},
+						"description": "Mengambil data detail satu order berdasarkan ID."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order Status",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"PROCESS\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/orders/1/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"orders",
+								"1",
+								"status"
+							]
+						},
+						"description": "Mengubah status order. Pilihan valid: CREATED, PROCESS, COMPLETED."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/orders/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"orders",
+								"1"
+							]
+						},
+						"description": "Menghapus data order berdasarkan ID."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,34 @@
+# IDE / Editor
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Frontend
+**/node_modules/
+**/.next/
+**/out/
+**/build/
+**/.env*.local
+**/.env
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.pnpm-debug.log*
+**/.tsbuildinfo
+
+# Java / Quarkus
+**/target/
+**/.quarkus/
+**/bin/
+**/*.class
+**/*.log
+**/.factorypath
+**/.project
+**/.classpath
+**/.settings/
+**/user-service/target/
+**/order-service/target/

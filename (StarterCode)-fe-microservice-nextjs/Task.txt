@@ -1,0 +1,6 @@
+Task: Integration
+
+1. TASK 1, src/services/axios/order-instance.ts
+2. TASK 2, src/services/actions/order-actions.ts
+3. TASK 3, src/features/order/use-get-order-list.ts
+4. TASK 4, src/components/fragments/card/customer/order-card.tsx

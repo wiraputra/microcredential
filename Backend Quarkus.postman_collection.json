@@ -1,0 +1,671 @@
+{
+  "info": {
+    "_postman_id": "383bafb8-a6c3-4705-af89-4bec7a67c73e",
+    "name": "Backend Quarkus",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49781188",
+    "_collection_link": "https://go.postman.co/collection/49781188-383bafb8-a6c3-4705-af89-4bec7a67c73e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "User-Service",
+      "item": [
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Parto\",\r\n  \"email\": \"parto@gmail.com\",\r\n  \"phone\": \"0812345678\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"ADMIN\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Parto\",\r\n  \"email\": \"parto@gmail.com\",\r\n  \"phone\": \"0812345678\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"ADMIN\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://localhost:8081/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJiYW5namVrIiwic3ViIjoianVhbkBnbWFpbC5jb20iLCJncm91cHMiOlsiQURNSU4iXSwiaWF0IjoxNzc2MjM5NjI0LCJleHAiOjE3NzYyNDMyMjQsImp0aSI6IjQ3NGU4OTVmLTI2NzAtNDU2MS05MzI1LTUxOTA2YjdjYTRkMSJ9.sbjFqdryuB-NJcBzzV2D5uxdtXGFELYBZ2WWTeIOvXg",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Parto\",\r\n  \"email\": \"parto@gmail.com\",\r\n  \"phone\": \"0812345678\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"ADMIN\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8081/users",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "users"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "content-length",
+                  "value": "756"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Yohanes\",\n        \"email\": \"yoh@gmail.com\",\n        \"phone\": \"083737\",\n        \"role\": \"ADMIN\",\n        \"createdAt\": \"2026-04-14T16:28:33.727261\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Juan\",\n        \"email\": \"juan@gmail.com\",\n        \"phone\": \"081209889\",\n        \"role\": \"ADMIN\",\n        \"createdAt\": \"2026-04-15T08:56:08.992724\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"test1\",\n        \"email\": \"test1@gmail.com\",\n        \"phone\": \"098763\",\n        \"role\": \"ADMIN\",\n        \"createdAt\": \"2026-04-15T10:13:34.672701\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"test3\",\n        \"email\": \"test3@gmail.com\",\n        \"phone\": \"09876332\",\n        \"role\": \"CUSTOMER\",\n        \"createdAt\": \"2026-04-15T10:53:39.41275\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"King\",\n        \"email\": \"king@gmail.com\",\n        \"phone\": \"081234537732\",\n        \"role\": \"CUSTOMER\",\n        \"createdAt\": \"2026-04-15T14:58:05.158518\"\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Parto\",\n        \"email\": \"parto@gmail.com\",\n        \"phone\": \"0812112233\",\n        \"role\": \"ADMIN\",\n        \"createdAt\": \"2026-04-15T15:11:43.521707\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "GetById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Parto\",\r\n  \"email\": \"parto@gmail.com\",\r\n  \"phone\": \"0812345678\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"ADMIN\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://localhost:8081/users/{{id}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users",
+                "{{id}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "GetById",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Parto\",\r\n  \"email\": \"parto@gmail.com\",\r\n  \"phone\": \"0812345678\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"ADMIN\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8081/users/{{id}}",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "users",
+                    "{{id}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "content-length",
+                  "value": "127"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 10,\n    \"name\": \"Parto\",\n    \"email\": \"parto@gmail.com\",\n    \"phone\": \"0812112233\",\n    \"role\": \"ADMIN\",\n    \"createdAt\": \"2026-04-15T15:11:43.521707\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Parto\",\r\n  \"email\": \"parto@gmail.com\",\r\n  \"phone\": \"0812345678\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"ADMIN\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://localhost:8081/users/{{id}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users",
+                "{{id}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"King\",\r\n  \"email\": \"king@gmail.com\",\r\n  \"phone\": \"081234537732\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"CUSTOMER\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8081/users/{{id}}",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "users",
+                    "{{id}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "content-length",
+                  "value": "129"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 9,\n    \"name\": \"King\",\n    \"email\": \"king@gmail.com\",\n    \"phone\": \"081234537732\",\n    \"role\": \"CUSTOMER\",\n    \"createdAt\": \"2026-04-15T14:58:05.158518\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Parto\",\r\n  \"email\": \"parto@gmail.com\",\r\n  \"phone\": \"0812345678\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"ADMIN\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://localhost:8081/users/{{id}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users",
+                "{{id}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Parto\",\r\n  \"email\": \"parto@gmail.com\",\r\n  \"phone\": \"0812345678\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"ADMIN\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8081/users/{{id}}",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "users",
+                    "{{id}}"
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": null,
+              "header": [],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Parto\",\r\n  \"email\": \"parto@gmail.com\",\r\n  \"phone\": \"0812345678\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"ADMIN\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://localhost:8081/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"king@gmail.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8081/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "content-length",
+                  "value": "281"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJiYW5namVrIiwic3ViIjoia2luZ0BnbWFpbC5jb20iLCJncm91cHMiOlsiQ1VTVE9NRVIiXSwiaWF0IjoxNzc2MzIzMTMwLCJleHAiOjE3NzYzMjY3MzAsImp0aSI6IjcwZjFlYzNkLTVhMTEtNDNjNC1hNzA5LWY4ZmU2MmRkMTBjNyJ9._TKSZjNMJGNxbLMujvyb0Ao0DXNhD8a1VV9JMdeszHw\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Order-Service",
+      "item": [
+        {
+          "name": "Get All",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/orders",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8082",
+                  "path": [
+                    "orders"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "content-length",
+                  "value": "136"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 2,\n        \"customerId\": 9,\n        \"pickup\": \"bukit hijau\",\n        \"destination\": \"taman penta\",\n        \"status\": \"CREATED\",\n        \"createdAt\": \"2026-04-16T11:14:40.286606\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Get By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/orders/{{id}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "orders",
+                "{{id}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get By Id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/orders/{{id}}",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8082",
+                  "path": [
+                    "orders",
+                    "{{id}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "content-length",
+                  "value": "125"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"customerId\": 8,\n    \"pickup\": \"Dps\",\n    \"destination\": \"Jimbaran\",\n    \"status\": \"COMPLETED\",\n    \"createdAt\": \"2026-04-15T17:01:23.040832\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"customerId\": 9,\r\n  \"pickup\": \"bukit hijau\",\r\n  \"destination\": \"taman penta\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8082/orders",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8082",
+                  "path": [
+                    "orders"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "content-length",
+                  "value": "135"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 2,\n    \"customerId\": 9,\n    \"pickup\": \"bukit hijau\",\n    \"destination\": \"taman penta\",\n    \"status\": \"CREATED\",\n    \"createdAt\": \"2026-04-16T11:14:40.2866064\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Status",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/orders/{{id}}/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "orders",
+                "{{id}}",
+                "status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Status",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"status\": \"COMPLETED\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8082/orders/{{id}}/status",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8082",
+                  "path": [
+                    "orders",
+                    "{{id}}",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "content-length",
+                  "value": "125"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"customerId\": 8,\n    \"pickup\": \"Dps\",\n    \"destination\": \"Jimbaran\",\n    \"status\": \"COMPLETED\",\n    \"createdAt\": \"2026-04-15T17:01:23.040832\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/orders/{{id}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "orders",
+                "{{id}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/orders/{{id}}",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8082",
+                  "path": [
+                    "orders",
+                    "{{id}}"
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": null,
+              "header": [],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
